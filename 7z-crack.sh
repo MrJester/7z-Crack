@@ -9,7 +9,7 @@ trap cleanup SIGINT
 
 while read password; do
 	echo -en "\rTrying Password: $password%\033[0K"
-	7z x -p$password $1 &>/dev/null
+	7z x -p$password $1 -aoa &>/dev/null
 	if [ $? -eq 0 ]; then echo -e "\n\nPassword found: $password\n"; exit 0; fi
 done < $2
 
