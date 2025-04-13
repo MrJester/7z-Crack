@@ -1,6 +1,6 @@
 #! /bin/bash
 
-figlet -t Central InfoSec 7zCrack
+figlet -t 7zCrack
 
 if [ $# -ne 2 ]; then echo "Usage: $0 file.7z wordlist"; exit 1; fi
 
